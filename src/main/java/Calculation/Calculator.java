@@ -101,7 +101,7 @@ public class Calculator {
 
         for(int i = 0; i <= 11; i++){
 
-            float stromErzeugt = ( this.leistungSolarmodul * wirkungsgrad * values[i] * neigungswinkel ) / 100;                     // (1-verlust) weggelassen, da API bereits loss mitberechnet
+            float stromErzeugt = ( this.leistungSolarmodul * wirkungsgrad * values[i] * neigungswinkel ) / 100;
             monthlyValuesErzeugterStrom[i] = stromErzeugt;
 
             float ersparnis = stromErzeugt * this.strompreis;

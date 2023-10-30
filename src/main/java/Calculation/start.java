@@ -1,7 +1,6 @@
 package Calculation;
 
 public class start {
-
     static String lat;
     static String lon;
     static String loss;

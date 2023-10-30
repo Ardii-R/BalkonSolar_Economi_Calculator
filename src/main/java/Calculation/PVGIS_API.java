@@ -50,8 +50,9 @@ public class PVGIS_API {
     public void getMonthlyValues(JSONObject json){
         try{
             for(int i = 0; i <= 11; i++){
-                JSONObject values = new JSONObject(json.getJSONObject("outputs").getJSONObject("monthly").getJSONArray("fixed").getString(i));
-                int value = values.getInt("H(i)_m");                                                                                               // "Average monthly sum of global irradiation per square meter received by the modules of the given system"
+                JSONObject values = new JSONObject(json.getJSONObject("outputs").getJSONObject("monthly")
+                        .getJSONArray("fixed").getString(i));
+                int value = values.getInt("H(i)_m");                            // "Average monthly sum of global irradiation per square meter received by the modules of the given system"
                 monthlyValues[i] = value;
             }
         }catch (Exception e){
